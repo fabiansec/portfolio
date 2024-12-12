@@ -1,28 +1,39 @@
 ---
 import GitHub from "../icons/GitHub.astro"
-import Tailwind from "../icons/Tailwind.astro"
 import Link from "../icons/Link.astro"
-import Python from "../icons/Python.astro"
 import LinkButton from "./LinkButton.astro"
+import Php from "../icons/Php.astro"
+import Bootstrap from "../icons/Bootstrap.astro"
+import JS from "../icons/Javascript.astro"
 
 
 const TAGS = {
-  PYTHON: {
-    name: "Python",
+  PHP: {
+    name: "PHP",
     class: "bg-[#003159] text-white ",
-    icon: Python,
+    icon: Php,
+  },
+  BOOTSTRAP: {
+    name: "Bootstrap",
+    class: "bg-[#533B78] text-white ",
+    icon: Bootstrap,
+  },
+  JAVASCRIPT: {
+    name: "Javascript",
+    class: "bg-yellow-700 text-white ",
+    icon:  JS,
   },
 
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Safetravel",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.PYTHON],
+      "Descubre la forma más fácil y rápida de planificar tus viajes en tren. Nuestra app te permite comprar billetes, gestionar tus reservas y explorar horarios en cuestión de minutos.",
+    link: "",
+    github: "https://github.com/fabiansec/safeTravel",
+    image: "/projects/safetravel.jpg",
+    tags: [TAGS.PHP, TAGS.BOOTSTRAP, TAGS.JAVASCRIPT],
   },
 
 ]
