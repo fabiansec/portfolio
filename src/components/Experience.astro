@@ -1,0 +1,29 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [
+  {
+    date: "Marzo - Junio 2024",
+    title: "Desarrollador Web",
+    company: "UniAgro",
+    description:
+      "Desarrollé y lancé dos proyectos web personalizados para empresas del sector agrícola.",
+  },
+  {
+    date: "Marzo - Junio 2022",
+    title: "Administrador de redes y sistemas",
+    company: "AgroSevilla",
+    description:
+      "Administrador de redes con experiencia en cableado estructurado, fibra óptica, WIFI y WIMAX. Optimización de redes corporativas e integración eficiente de equipos cliente.",
+  },
+];
+---
+
+<ol class="relative mt-10 mb-20">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

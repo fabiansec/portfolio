@@ -1,53 +1,46 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
-import LinkedIn from "../icons/LinkedIn.astro"
-import GitHub from "../icons/GitHub.astro"
-import SocialPill from "../icons/SocialPill.astro";
+import BriefCase from "../icons/BriefCase.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import TitleSection from "../components/TitleSection.astro";
+import Projects from "../components/Projects.astro";
+import Hero from "../components/Hero.astro";
+import ProfileCheck from "../icons/ProfileCheck.astro";
+import Code from "../icons/Code.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
+<Layout
+  title="Porfolio de midudev - Desarrollador y Programador Web con 15 años de experiencia"
+  description="Contrata a midudev para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas."
+>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+      </slot>
+    </Hero>
+    </SectionContainer>
+    <div class="space-y-24">
+    <SectionContainer id="experiencia">
+      <TitleSection>
+        <BriefCase class="size-8" />
+        Experiencia laboral
+      </TitleSection>
+      <Experience />
+    </SectionContainer>
 
-<Layout title="Home">
-  <main>
-    <section class="w-full lg:w-[740px] mx-auto py-44">
-      <img
-        class="rounded-full w-12 h-12 mb-4"
-        src="https://avatars.githubusercontent.com/u/152921785?s=400&u=41d4d91146dc3f79c5689f5cdde88f0c934a3f85&v=4"
-        alt="fabian foto"
-      />
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
-        Hey, soy Fabián <a
-          href="https://www.linkedin.com/in/fabianespaña"
-          target="_blank"
-          rel="noopener"
-          class="flex justify-center items-center"
-        >
-          <Badge>Disponible para trabajar</Badge></a
-        >
-      </h1>
-      <h2 class="text-xl text-grap">
-        <span> Soy estudiante de Ciberseguridad </span> con sólidos conocimientos
-        en <span class="text-yellow-200/90"> desarrollo de software </span>,
-        apasionado por la tecnología y la <span class="text-red-100/70">
-          seguridad informática.
-        </span>
-      </h2>
+    <SectionContainer id="proyectos">
+      <TitleSection>
+        <Code class="size-7" />
+        Proyectos
+      </TitleSection>
+      <Projects />
+    </SectionContainer>
 
-      <nav class="flex gap-x-2">
-      
-          <SocialPill href="https://www.linkedin.com/in/fabianespaña">
-            <LinkedIn class="w-6 h-6"></Linkedin>
-              LinkedIn
-          </SocialPill>
-          <SocialPill href="https://github.com/fabiansec">
-            <GitHub class="w-6 h-6"></GitHub>
-              GitHub
-          </SocialPill>
-          
-      </nav> 
-      
-    </section>
+   
+  </div>
   </main>
+  
 </Layout>

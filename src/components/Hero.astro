@@ -1,0 +1,51 @@
+---
+const personalImageAlt = "Fabián"
+import Badge from "../components/Badge.astro"
+import LinkedInIcon from "../icons/LinkedIn.astro"
+import MailIcon from "../icons/Mail.astro"
+import SocialPill from "../icons/SocialPill.astro"
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-full shadow-lg size-16"
+      src="https://avatars.githubusercontent.com/u/152921785?s=400&u=41d4d91146dc3f79c5689f5cdde88f0c934a3f85&v=4"
+      alt={personalImageAlt}
+    />
+    <a
+      href="https://linkedin.com/in/fabianespaña"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Disponible para trabajar</Badge>
+    </a>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+  >
+    Hey, soy Fabián
+  </h1>
+  <p
+    class="mt-6 text-pretty text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+  >
+  Estudiante de Ciberseguridad con <strong>sólidos conocimientos </strong>
+  en el <strong
+      >desarrollo de software</strong
+    > apasionado por la tecnología y la<strong> seguridad.</strong>
+  </p>
+
+   
+  </span>
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPill href="mailto:fabianespana.secure@gmail.com">
+      <MailIcon class="size-4" />
+      Contáctame
+    </SocialPill>
+    <SocialPill href="https://linkedin.com/in/fabianespaña">
+      <LinkedInIcon class="size-4" />
+      LinkedIn
+    </SocialPill>
+  </nav>
+</div>
