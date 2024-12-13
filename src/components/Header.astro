@@ -46,9 +46,10 @@ const navItems = [
   </nav>
 </header>
 
-<script>
+<script >
   document.addEventListener("astro:page-load", () => {
     const sections = document.querySelectorAll("section")
+    console.log("Secciones encontradas:", sections);
     const navItems = document.querySelectorAll("header nav a")
 
     const callback = (entries: any[]) => {

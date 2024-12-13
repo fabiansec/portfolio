@@ -5,7 +5,8 @@ import LinkButton from "./LinkButton.astro"
 import Php from "../icons/Php.astro"
 import Bootstrap from "../icons/Bootstrap.astro"
 import JS from "../icons/Javascript.astro"
-
+import CSS from "../icons/CSS.astro"
+import HTML from "../icons/HTML.astro"
 
 const TAGS = {
   PHP: {
@@ -23,17 +24,34 @@ const TAGS = {
     class: "bg-yellow-700 text-white ",
     icon:  JS,
   },
+  CSS: {
+    name: "CSS",
+    class: "bg-[#3DA8DA]/80 text-white ",
+    icon:  CSS,
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-[#E98864]/80 text-white ",
+    icon:  HTML,
+  },
 
 }
 const PROJECTS = [
   {
-    title: "Safetravel",
+    title: "SafeTravel",
     description:
       "Descubre la forma más fácil y rápida de planificar tus viajes en tren. Nuestra app te permite comprar billetes, gestionar tus reservas y explorar horarios en cuestión de minutos.",
     link: "",
     github: "https://github.com/fabiansec/safeTravel",
     image: "/projects/safetravel.jpg",
     tags: [TAGS.PHP, TAGS.BOOTSTRAP, TAGS.JAVASCRIPT],
+  },
+  {
+    title: "VitalFit",
+    description:"Es una aplicación web moderna diseñada para la gestión de clases de fitness, dirigida a usuarios que desean unirse a actividades y administradores que gestionan clases, actividades y salas. La plataforma ofrece una experiencia simple y eficiente para todos.",
+    github: "https://github.com/fabiansec/VitalFit",
+    image: "/projects/vitalfit.png",
+    tags: [TAGS.PHP, TAGS.JAVASCRIPT,TAGS.CSS, , TAGS.HTML],
   },
 
 ]

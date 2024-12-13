@@ -1,14 +1,15 @@
 ---
-import "@fontsource/onest"
-
+import "@fontsource-variable/onest";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
+
 interface Props {
-  title: string
-  description: string
+  title: string;
+  description: string;
 }
 
-const { description, title } = Astro.props
+const { description, title } = Astro.props;
 ---
 
 <!doctype html>
@@ -17,10 +18,10 @@ const { description, title } = Astro.props
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="svg" href="./favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-   <!--  <ViewTransitions /> -->
+    <ViewTransitions />
   </head>
 
   <body class="relative text-black dark:text-white">
@@ -49,6 +50,29 @@ const { description, title } = Astro.props
         flex-direction: column;
         min-height: 100vh;
         overscroll-behavior: none;
+      }
+
+      /* Estilo de la barra de desplazamiento */
+      ::-webkit-scrollbar {
+        width: 10px; /* Ancho de la barra en scroll vertical */
+        height: 10px; /* Altura de la barra en scroll horizontal */
+      }
+
+      /* Color de fondo de la barra */
+      ::-webkit-scrollbar-track {
+        background: #181C33; /* Fondo del contenedor de la barra */
+      }
+
+      /* Color de la barra */
+      ::-webkit-scrollbar-thumb {
+        background-color: #f6dc78; /* Color de la barra */
+        border-radius: 10px; /* Redondeo de los bordes */
+        border: 2px solid #f6dc78; /* Espacio entre la barra y el contenedor */
+      }
+
+      /* Color de la barra al pasar el cursor */
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #555; /* Color más oscuro para hover */
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -110,9 +134,4 @@ const { description, title } = Astro.props
       }
     </style>
   </body>
-
-
-
-
-
 </html>
